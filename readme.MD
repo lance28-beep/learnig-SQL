@@ -119,11 +119,52 @@
 - relational databases uses sql and store data in tables with rows and columns
 - non-relational data store data using other data structures.
 
+## Tables and keys
+
+<code>primary key</code> also called a primary keyword, is a key in a relational database that is unique for each record. It is a unique identifier, such as a driver license number, telephone number (including area code), or vehicle identification number (VIN). A relational database must always have one and only one primary key
+
+<br>
+
+<code>surrogate key</code> uniquely identifies each entity in the dimension table, regardless of its natural source key. This is primarily because a surrogate key generates a simple integer value for every new entity. Surrogate keys provide the means to maintain data warehouse information when dimensions change.<br>
+<img src='./img/primaryKey.PNG' width='500'><br>
+<code>natural key</code> is a single column or set of columns that uniquely identifies a single record in a table, where the key columns are made up of real data. When I say “real data” I mean data that has meaning and occurs naturally in the world of data.<br>
+<img src='./img/naturalKey.PNG' width='500'><br>
+<code>Foreign Key</code> is a database key that is used to link two tables together. The FOREIGN KEY constraint identifies the relationships between the database tables by referencing a column, or set of columns, in the Child table that contains the foreign key, to the PRIMARY KEY column or set of columns, in the Parent table<br>
+<img src='./img/foreignKeys.PNG' width='500'><br>
+<code>composite key</code> is a candidate key that consists of two or more attributes (table columns) that together uniquely identify an entity occurrence (table row). A compound key is a composite key for which each attribute that makes up the key is a simple (foreign) key in its own right.
+
+### Type of SQL Keys<br>
+<img src='./img/sqlKeys.PNG' width='500'><br>
+
+- Primary <br>
+  - Primary Key is a field that can be used to identify all the tuples uniquely in the database. Only one of the columns can be declared as a primary key. A Primary Key can not have a NULL value.<br>
+- Unique Key
+  - Unique Key can be a field or set of fields that can be used to uniquely identify the tuple from the database. One or more fields can be declared as a unique Key. The unique Key column can also hold the NULL value. Use of Unique Key improves the performance of data retrieval. It makes searching for records from the database much more faster & efficient.<br>
+- Candidate Key
+  - Candidate Key can be a column or group of columns that can qualify for the Unique Key. Every table has at least one Candidate Key. A table may have one or more Candidate Key. Each Candidate Key can work as a Primary Key if required in certain scenarios.
+- Alternate Key
+  - Alternate Key is that Key which can be used as a Primary Key if required. Alternate Key also qualifies to be a Primary Key but for the time being, It is not the Primary Key.
+- Composite Key
+  - Composite Key is also known as Compound Key / Concatenated Key. Composite Key refers to a group of two or more columns that can be used to identify a tuple from the table uniquely. A group of the column in combination with each other can identify a row uniquely but a single column of that group doesn’t promise to identify the row uniquely.
+- Super Key
+  - Super Key is a combination of columns, each column of the table remains dependent on it. Super Key may have some more columns in the group which may or may not be necessary to identify the tuple uniquely from the table. Candidate Key is the subset of the Super Key. Candidate Key is also known as minimal Super Key.
+- Foreign Key
+   - A foreign key is a column which is known as Primary Key in the other table i.e. A Primary Key in a table can be referred to as a Foreign Key in another table. Foreign Key may have duplicate & NULL values if it is defined to accept NULL values.
+
+
 # SQL Tutorial<br>
 
 - SQL is a standard language for storing, manipulating and retrieving data in databases.<br>
 - SQL stands for Structured Query Language<br>
 - SQL became a standard of the American National Standards Institute (ANSTI) IN 1986, and of the International Organization for Standardization (ISO) in 1987<br>
+
+# Structured Query Language (SQL)
+- SQL is a language used for interacting with relational database management systems (RDBMS)
+  - You can use SQL to get the RDBMS to do things for you
+    - create, retrieve, update & delete data
+    - create & manage databases
+    - design & create databases tables
+    - Perform administration tasks(security, user management, import/export etc.)
 
 ## What can SQL do?<hr>
 
